@@ -1,5 +1,7 @@
 from django.db import models
 
+from .manager import PaymentManager
+
 
 class Payment(models.Model):
     booking = models.OneToOneField('booking.Booking', related_name='payment_booking', on_delete=models.CASCADE)
@@ -8,6 +10,8 @@ class Payment(models.Model):
     status = models.CharField(max_length=20, choices=[('pending', 'Pending'), ('completed', 'Completed'), ('failed', 'Failed')], default='pending')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    objects = PaymentManager()
 
     class Meta:
         verbose_name = 'Payment'
