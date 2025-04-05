@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # build-in apps
-    ###
+    'drf_yasg',
+    'rest_framework',
+    'django_filters',
 
     # local apps
     'user',
@@ -49,6 +51,12 @@ INSTALLED_APPS = [
     'payment',
     'booking',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 5,
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
