@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Payment(models.Model):
-    booking = models.OneToOneField('booking.Booking', related_name='payment', on_delete=models.CASCADE)
+    booking = models.OneToOneField('booking.Booking', related_name='payment_booking', on_delete=models.CASCADE)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     payment_method = models.CharField(max_length=50, choices=[('cash', 'Cash'), ('credit', 'Credit Card'), ('paypal', 'PayPal')])
     status = models.CharField(max_length=20, choices=[('pending', 'Pending'), ('completed', 'Completed'), ('failed', 'Failed')], default='pending')

@@ -20,7 +20,6 @@ class CustomUserManager(UserManager):
             **extra_fields,
         )
 
-        user.is_active = True
         user.role = CustomUser.Roles.USER
         user.set_password(password)
         user.save(using=self._db)
@@ -41,7 +40,6 @@ class CustomUserManager(UserManager):
             **extra_fields,
         )
 
-        user.is_active = True
         user.role = CustomUser.Roles.ADMIN
         user.is_staff = True
         user.is_superuser = True

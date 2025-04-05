@@ -33,7 +33,6 @@ class CustomUserAdmin(UserAdmin):
         'email',
         'first_name',
         'last_name',
-        'role',
         'phone_number',
     )
     list_filter = (
@@ -41,7 +40,6 @@ class CustomUserAdmin(UserAdmin):
         'is_staff',
         'is_active',
         'role',
-        'date_joined',
     )
     readonly_fields = (
         'id',

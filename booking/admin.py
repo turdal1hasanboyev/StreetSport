@@ -14,12 +14,10 @@ class BookingAdmin(admin.ModelAdmin):
         'start_time',
         'end_time',
         'status',
-        'price',
         'created_at',
         'updated_at',
     )
     search_fields = (
-        'status',
         'user__email',
         'stadium__name',
     )

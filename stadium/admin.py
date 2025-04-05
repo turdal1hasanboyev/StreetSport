@@ -13,7 +13,6 @@ class StadiumAdmin(admin.ModelAdmin):
         'name',
         'location',
         'capacity',
-        'price',
         'is_available',
         'image',
         'created_at',

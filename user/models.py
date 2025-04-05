@@ -2,8 +2,6 @@ from django.db import models
 
 from django.contrib.auth.models import AbstractUser
 
-from ckeditor.fields import RichTextField
-
 from .manager import CustomUserManager
 
 
@@ -22,11 +20,7 @@ class CustomUser(AbstractUser):
     role = models.CharField(max_length=10, choices=Roles.choices, default=Roles.USER)
     phone_number = models.CharField(max_length=15, blank=True, null=True)
     image = models.ImageField(upload_to='users/', blank=True, null=True)
-    description = RichTextField(blank=True, null=True)
-    
-    is_active = models.BooleanField(default=False)
-    is_staff = models.BooleanField(default=False)
-    is_superuser = models.BooleanField(default=False)
+    description = models.TextField(blank=True, null=True)
 
     objects = CustomUserManager()
 
