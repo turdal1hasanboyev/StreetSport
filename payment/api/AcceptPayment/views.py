@@ -9,6 +9,7 @@ from permissions.is_manager import IsManager
 
 class AcceptPaymentAPIView(APIView):
     permission_classes = [IsManager]
+    
     def post(self, request, pk):
         try:
             payment = Payment.objects.accept_payment(pk)
