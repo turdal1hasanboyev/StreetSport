@@ -28,6 +28,8 @@ class StadiumAdmin(admin.ModelAdmin):
     )
     readonly_fields = (
         'id',
+        'created_at',
+        'updated_at',
     )
 
 
@@ -48,4 +50,6 @@ class StadiumManagerAdmin(admin.ModelAdmin):
     )
     readonly_fields = (
         'id',
+        'created_at',
+        'updated_at',
     )

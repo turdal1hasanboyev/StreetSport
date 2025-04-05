@@ -9,9 +9,9 @@ from permissions.is_manager import IsManager
 class CheckInAPIView(APIView):
     permission_classes = [IsManager]
 
-    def post(self, request, booking_id):
+    def post(self, request, pk):
         try:
-            booking = Booking.objects.get(id=booking_id)
+            booking = Booking.objects.get(id=pk)
         except Booking.DoesNotExist:
             return Response({'error': 'Booking not found'}, status=status.HTTP_404_NOT_FOUND)
 

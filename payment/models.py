@@ -1,6 +1,6 @@
 from django.db import models
 
-from .manager import PaymentManager
+from .managers import PaymentManager
 
 
 class Payment(models.Model):

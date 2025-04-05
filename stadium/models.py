@@ -9,7 +9,7 @@ class Stadium(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField(blank=True, null=True)
     is_available = models.BooleanField(default=True)
-    image = models.ImageField(upload_to='stadiums/', blank=True, null=True)
+    image = models.ImageField(upload_to='stadiums/', default='img/default.png')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

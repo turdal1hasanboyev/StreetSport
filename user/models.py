@@ -2,7 +2,7 @@ from django.db import models
 
 from django.contrib.auth.models import AbstractUser
 
-from .manager import CustomUserManager
+from .managers import CustomUserManager
 
 
 class CustomUser(AbstractUser):
@@ -19,7 +19,7 @@ class CustomUser(AbstractUser):
 
     role = models.CharField(max_length=10, choices=Roles.choices, default=Roles.USER)
     phone_number = models.CharField(max_length=15, blank=True, null=True)
-    image = models.ImageField(upload_to='users/', blank=True, null=True)
+    image = models.ImageField(upload_to='users/', default='img/default.png')
     description = models.TextField(blank=True, null=True)
 
     objects = CustomUserManager()
