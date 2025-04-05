@@ -46,6 +46,9 @@ INSTALLED_APPS = [
 
     # local apps
     'user',
+    'stadium',
+    'payment',
+    'booking',
 ]
 
 MIDDLEWARE = [

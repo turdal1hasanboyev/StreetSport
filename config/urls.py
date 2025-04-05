@@ -27,6 +27,9 @@ urlpatterns = [
     path('streetsport/', admin.site.urls),
 
     path('', include('user.urls')),
+    path('', include('stadium.urls')),
+    path('', include('booking.urls')),
+    path('', include('payment.urls')),
 
     path('ckeditor/', include('ckeditor_uploader.urls')),
 
