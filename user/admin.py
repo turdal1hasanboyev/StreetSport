@@ -1,13 +1,6 @@
 from django.contrib import admin
-
 from django.contrib.auth.admin import UserAdmin
-
 from .models import CustomUser
-
-
-admin.site.site_header = "StreetSport Admin Panel"
-admin.site.site_title = "StreetSport Admin Panel"
-admin.site.index_title = "Welcome to StreetSport Admin Panel!"
 
 
 @admin.register(CustomUser)
@@ -70,11 +63,9 @@ class CustomUserAdmin(UserAdmin):
     )
     add_fieldsets = (
         ('Create Super User', {
-            'classes': ('wide',),
             'fields': ('email', 'password1', 'password2',),
         }),
         ("Permissions", {
-            'classes': ('wide',),
             'fields': ('is_superuser', 'is_staff', 'is_active', 'role',),
         }),
     )

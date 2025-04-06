@@ -1,5 +1,4 @@
 from django.urls import path
-
 from .api.StadiumCreate.views import StadiumCreateAPIView
 from .api.StadiumCount.views import StadiumCountAPIView
 from .api.StadiumUpdateDestroy.views import StadiumUpdateDestroyAPIView

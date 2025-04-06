@@ -1,5 +1,4 @@
 from django.urls import path
-
 from .api.BookingCheckIn.views import CheckInAPIView
 from .api.BookingList.views import BookingListAPIView
 from .api.BookingCreate.views import BookingCreateAPIView

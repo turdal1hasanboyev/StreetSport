@@ -1,5 +1,4 @@
 from rest_framework.generics import CreateAPIView
-
 from .serializers import BookingCreateAPISerializer
 from booking.models import Booking
 from permissions.is_user import IsUser

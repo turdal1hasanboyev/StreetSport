@@ -1,5 +1,4 @@
 from rest_framework import generics
-
 from stadium.models import StadiumManager
 from permissions.is_owner import IsOwner
 from .serializers import StadiumManagerCreateAPISerializer

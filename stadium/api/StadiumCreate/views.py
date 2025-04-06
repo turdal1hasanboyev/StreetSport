@@ -1,5 +1,4 @@
 from rest_framework import generics
-
 from .serializers import StadiumCreateAPISerializer
 from stadium.models import Stadium
 from permissions.is_admin import IsAdmin

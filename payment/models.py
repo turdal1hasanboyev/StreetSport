@@ -1,5 +1,4 @@
 from django.db import models
-
 from .managers import PaymentManager
 
 
@@ -12,10 +11,6 @@ class Payment(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     objects = PaymentManager()
-
-    class Meta:
-        verbose_name = 'Payment'
-        verbose_name_plural = 'Payments'
 
     def __str__(self):
         return f"Payment for {self.booking.user.first_name} {self.booking.user.last_name} - Amount: {self.amount}"

@@ -13,10 +13,6 @@ class Stadium(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    class Meta:
-        verbose_name = 'Stadium'
-        verbose_name_plural = 'Stadiums'
-
     def __str__(self):
         return f"{self.name} ({self.location})"
 
@@ -26,10 +22,6 @@ class StadiumManager(models.Model):
     manager = models.ForeignKey('user.CustomUser', related_name='managed_stadiums', on_delete=models.CASCADE, limit_choices_to={'role': 'manager'})
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        verbose_name = 'Stadium Manager'
-        verbose_name_plural = 'Stadium Managers'
 
     def __str__(self):
         return f"{self.manager.first_name} {self.manager.last_name} - {self.stadium.name}"
