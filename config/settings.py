@@ -41,10 +41,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
 
-    'user',
-    'stadium',
-    'payment',
-    'booking',
+    'apps.user',
+    'apps.stadium',
+    'apps.payment',
+    'apps.booking',
 ]
 
 REST_FRAMEWORK = {
